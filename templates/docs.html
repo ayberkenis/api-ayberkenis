@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Public API's by AyberkEnis</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+</head>
+<body>
+<h3 class="text-center mt-3">Public API's by AyberkEnis</h3>
+<ul class="nav justify-content-center">
+  <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="{{ url_for('layout.index') }}">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="{{ url_for('exchange.index_exchanges') }}">Exchanges</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="{{ url_for('earthquake.index_earthquake') }}">Earthquakes</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/ayberkenis" target="_blank">GitHub</a>
+  </li>
+      <li class="nav-item">
+    <a class="nav-link" href="{{ url_for('layout.docs') }}">Docs</a>
+  </li>
+</ul>
+
+<div class="container mt-4">
+  <div class="row">
+    <div class="col">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Earthquakes API</h5>
+        <br>
+        <ul>
+          <li>All Earthquakes Endpoint:
+            <code>https://api.ayberkenis.online/earthquake/all</code>
+            <p class="text-muted">No arguments needed.</p>
+            <p class="text-muted">Return type: <mark>JSON</mark></p>
+          </li>
+          <li>Latest Earthquake Endpoint:
+            <code>https://api.ayberkenis.online/earthquake/latest</code>
+            <p class="text-muted">No arguments needed.</p>
+            <p class="text-muted">Return type: <mark>JSON</mark></p>
+          </li>
+          <li>Query an Earthquake Endpoint:
+            <code>https://api.ayberkenis.online/earthquakes/q</code>
+            <p class="text-muted">Available arguments:</p>
+            <ul>
+              <li> <code>time</code></li>
+              <li> <code>date</code></li>
+              <li> <code>latitude</code></li>
+              <li> <code>longitude</code></li>
+              <li> <code>depth</code></li>
+              <li> <code>magnitude_md</code></li>
+              <li> <code>magnitude_ml</code></li>
+              <li> <code>magnitude_mw</code></li>
+              <li> <code>location</code></li>
+              <li> <code>state</code></li>
+              <li> <code>google_maps</code></li>
+            </ul>
+            <br>
+            <p class="text-muted">Return type: <mark>JSON</mark></p>
+          </li>
+        </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+  <div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Exchanges API</h5>
+    <br>
+    <ul>
+      <li>All Exchanges Endpoint:
+        <code>https://api.ayberkenis.online/exchange/all</code>
+        <p class="text-muted">No arguments needed.</p>
+        <p class="text-muted">Return type: <mark>JSON</mark></p>
+      </li>
+      <li>Query an Exchange Endpoint:
+        <code>https://api.ayberkenis.online/exchange/q</code>
+        <p class="text-muted">Available arguments:</p>
+        <ul>
+          <li> <code>currency_name</code></li>
+          <li> <code>currency_code</code></li>
+          <li> <code>currency_buy</code></li>
+          <li> <code>currency_sell</code></li>
+          <li> <code>currency_high</code></li>
+          <li> <code>currency_low</code></li>
+          <li> <code>currency_change</code></li>
+          <li> <code>time</code></li>
+
+        </ul>
+        <br>
+        <p class="text-muted">Return type: <mark>JSON</mark></p>
+      </li>
+    </ul>
+  </div>
+  </div>
+</div>
+</div>
+</div>
+
+
+
+
+
+</body>
+<style>
+  html {
+  position: relative;
+  min-height: 100%;
+  }
+  body {
+    margin-bottom: 60px; /* Margin bottom by footer height */
+  }
+  .footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+}
+</style>
+    <footer class="footer">
+      <div class="container">
+        <span class="text-muted text-center"><a href="https://ayberkenis.online" target="_blank" class="btn btn-dark">AyberkEnis</a></span>
+      </div>
+    </footer>
+</html>

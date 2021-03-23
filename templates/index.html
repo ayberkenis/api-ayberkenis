@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Public API's by AyberkEnis</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+</head>
+<body>
+<h3 class="text-center mt-3">Public API's by AyberkEnis</h3>
+<ul class="nav justify-content-center">
+  <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="{{ url_for('layout.index') }}">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="{{ url_for('exchange.index_exchanges') }}">Exchanges</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="{{ url_for('earthquake.index_earthquake') }}">Earthquakes</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/ayberkenis" target="_blank">GitHub</a>
+  </li>
+      <li class="nav-item">
+    <a class="nav-link" href="{{ url_for('layout.docs') }}">Docs</a>
+  </li>
+</ul>
+<div class="container container-sm mt-4 w-50">
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+      <div class="col">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Exchanges API</h5>
+            <p class="card-text">Turkish Currency exchange rates as an API. Made using BeautifulSoup from <a href="https://kur.doviz.com" target="_blank">Doviz.com</a></p>
+              <a href="{{ url_for('exchange.index_exchanges') }}" class="btn btn-primary d-flex justify-content-center">See Exchanges</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Earthquakes API</h5>
+            <p class="card-text">Earthquakes on Turkey. Data is from <a href="http://www.koeri.boun.edu.tr/scripts/lst1.asp" target="_blank">Kandilli Rasathanesi</a>'s official website. </p>
+            <a href="{{ url_for('earthquake.index_earthquake') }}" class="btn btn-primary d-flex justify-content-center">See Earthquakes</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">GitHub</h5>
+            <p class="card-text">All API's that are shared here are Public and Open-Source. Visit my Github to fork or contribute.</p>
+            <a href="https://github.com/ayberkenis" class="btn btn-primary d-flex justify-content-center" target="_blank">GitHub</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Docs</h5>
+            <p class="card-text">You can visit documentations to see how you can make an api call to the endpoints.</p>
+            <a href="{{ url_for('layout.docs') }}" class="btn btn-primary d-flex justify-content-center">Visit Docs</a>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+</body>
+<style>
+  .footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+}
+</style>
+    <footer class="footer">
+      <div class="container">
+        <span class="text-muted text-center"><a href="https://ayberkenis.online" target="_blank" class="btn btn-dark">AyberkEnis</a></span>
+      </div>
+    </footer>
+</html>
